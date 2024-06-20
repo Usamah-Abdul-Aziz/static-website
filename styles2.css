@@ -760,8 +760,13 @@ body {
 }
 
 @media (max-width: 768px) {
-    .education {
-        flex-basis: calc(50% - 2rem);
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
     }
 
     header img {
@@ -783,10 +788,6 @@ body {
 }
 
 @media (max-width: 480px) {
-    .education {
-        flex-basis: 100%;
-    }
-
     nav ul {
         flex-direction: column;
         align-items: center;
