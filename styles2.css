@@ -46,10 +46,12 @@ header p {
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 1rem;
     color: #f3e600;
 }
