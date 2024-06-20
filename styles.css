@@ -14,8 +14,10 @@ body {
 }
 
 header {
-    background: linear-gradient(45deg, #001eff, #133e7c);
-    color: #f3E600;
+    background: linear-gradient(45deg, #6a00ff, #00f5ff);
+    background-size: 400% 400%;
+    animation: gradient-animation 15s ease infinite;
+    color: #f3e600;
     padding: 2rem 0;
     text-align: center;
 }
@@ -44,12 +46,14 @@ header p {
 nav ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 1rem;
-    color: #f3E600;
+    color: #f3e600;
 }
 
 nav ul li a {
@@ -60,7 +64,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #001eff;
+    color: #6a00ff;
 }
 
 #hero {
@@ -78,11 +82,11 @@ nav ul li a:hover {
 
 #hero p {
     font-size: 1.2rem;
-    color: #f3E600;
+    color: #f3e600;
 }
 
 #hero .btn {
-    background-color: #001eff;
+    background-color: #6a00ff;
     color: #fff;
     padding: 0.75rem 1.5rem;
     text-decoration: none;
@@ -153,13 +157,15 @@ section {
 
 .education p {
     font-size: 0.9rem;
-    color: #f3E600;
+    color: #f3e600;
 }
 
 footer {
-    background: linear-gradient(45deg, #001eff, #133e7c);
-    color: #f3E600;
-    padding: 2rem 0;
+    background: linear-gradient(45deg, #6a00ff, #00f5ff);
+    background-size: 400% 400%;
+    animation: gradient-animation 15s ease infinite;
+    color: #f3e600;
+    padding: 1rem 0;
     text-align: center;
 }
 
@@ -191,6 +197,23 @@ footer .socials img:hover {
     .education {
         flex-basis: calc(50% - 2rem);
     }
+
+    header img {
+        width: 120px;
+        height: 120px;
+    }
+
+    #hero h2 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+    .container {
+        width: 95%;
+    }
 }
 
 @media (max-width: 480px) {
@@ -198,8 +221,41 @@ footer .socials img:hover {
         flex-basis: 100%;
     }
 
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
     nav ul li {
-        display: block;
         margin: 0.5rem 0;
+    }
+
+    header img {
+        width: 100px;
+        height: 100px;
+    }
+
+    #hero h2 {
+        font-size: 1.5rem;
+    }
+
+    #hero p {
+        font-size: 0.9rem;
+    }
+
+    .container {
+        width: 100%;
+    }
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }
